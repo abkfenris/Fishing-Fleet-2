@@ -51,7 +51,7 @@ code,
 del,
 dfn,
 em,
-font,
+img,
 ins,
 kbd,
 q,
@@ -64,6 +64,10 @@ sub,
 sup,
 tt,
 var,
+b,
+u,
+i,
+center,
 dl,
 dt,
 dd,
@@ -81,30 +85,74 @@ tfoot,
 thead,
 tr,
 th,
-td {
-  border: 0;
-  font-family: inherit;
-  font-size: 100%;
-  font-style: inherit;
-  font-weight: inherit;
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
-  outline: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
   vertical-align: baseline;
 }
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption,
+th,
+td {
+  font-weight: normal;
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
 html {
-  font-size: 62.5%;
-  /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
-
   overflow-y: scroll;
-  /* Keeps page centred in all browsers regardless of content height */
-
+  font-size: 100%;
   -webkit-text-size-adjust: 100%;
-  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
-
   -ms-text-size-adjust: 100%;
-  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
-
 }
 body {
   background: #ffffff;
@@ -186,6 +234,14 @@ hr {
   border: 0;
   height: 1px;
   margin-bottom: 1.5em;
+}
+h1 {
+  font-size: 21px;
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 18px;
+  font-size: 1.285715286rem;
 }
 /* Text elements */
 p {
@@ -414,6 +470,10 @@ textarea {
 
   width: 98%;
 }
+#page {
+  display: block;
+  margin: 0 auto;
+}
 /* Links */
 a {
   color: #21759b;
@@ -623,4 +683,24 @@ object {
 /* Search widget */
 #searchsubmit {
   display: none;
+}
+/* Different Layout Views
+----------------------------------------------- */
+/* Mobile layout
+ * 240-479 px
+ * Zoomed out below 320 px
+----------------------------------------------- */
+@media screen and (min-width: 15em) {
+  #page {
+    width: 16.5em;
+  }
+}
+/* Wide Mobile layout
+ * 480-767 px
+ * Zoomed in above 480 px
+----------------------------------------------- */
+@media screen and (min-width: 30em) {
+  #page {
+    width: 25.5em;
+  }
 }
