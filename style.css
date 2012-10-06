@@ -419,12 +419,12 @@ a {
   color: #21759b;
 }
 a:visited {
-  color: #000f35;
+  color: #10648a;
 }
 a:hover,
 a:focus,
 a:active {
-  color: #87dbff;
+  color: #65b9df;
 }
 /* Alignment */
 .alignleft {
