@@ -155,7 +155,7 @@ html {
   -ms-text-size-adjust: 100%;
 }
 body {
-  background: #ffffff;
+  background: #21759b;
 }
 article,
 aside,
@@ -228,7 +228,23 @@ h4,
 h5,
 h6 {
   clear: both;
+  margin: 24px 0;
+  margin: 1.714285714rem 0;
+  line-height: 1.714285714;
 }
+#masthead {
+  background-color: #fff;
+}
+.site-content {
+  background-color: #fff;
+}
+/* header #site-header {
+	h1 {
+		font-size: 24px;
+		font-size: 1.714285714rem;
+		line-height: 2;
+	}
+} */
 hr {
   background-color: #ccc;
   border: 0;
@@ -692,7 +708,7 @@ object {
 ----------------------------------------------- */
 @media screen and (min-width: 15em) {
   #page {
-    width: 16.5em;
+    width: 11em;
   }
 }
 /* Wide Mobile layout
@@ -701,6 +717,24 @@ object {
 ----------------------------------------------- */
 @media screen and (min-width: 30em) {
   #page {
-    width: 25.5em;
+    width: 17em;
+  }
+}
+/* Tablet layout
+ * 600-911 px
+ * Zoomed in above 600 px
+----------------------------------------------- */
+@media screen and (min-width: 37.5em) {
+  #page {
+    width: 23em;
+  }
+}
+/* Widescreen layout
+ * 912-1887 px
+ * Zoomed in above 912 px
+----------------------------------------------- */
+@media screen and (min-width: 57em) {
+  #page {
+    width: 35em;
   }
 }

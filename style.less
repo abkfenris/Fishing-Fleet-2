@@ -23,7 +23,7 @@ and Blueprint http://www.blueprintcss.org/
 /* Columns from frameless
 -------------------------------------------------------------- */
 @line: 24;
-@em: 16*1em;
+@em: 24*1em; // The number must match the line
 
 @column: 48;
 @gutter: 24;
@@ -55,7 +55,7 @@ and Blueprint http://www.blueprintcss.org/
 @body: rgb(33, 117, 155);
 @emphasis: rgb(33, 117, 155);
 @aside: rgb(33, 117, 155);
-@background: #fff;
+@background: rgb(33, 117, 155);
 @highlight: rgb(33, 117, 155);
 @link: rgb(33, 117, 155);
 @link-light: @link + #444;
@@ -176,7 +176,23 @@ textarea {
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	clear: both;
+	margin: 24px 0;
+	margin: 1.714285714rem 0;
+	line-height: 1.714285714;
 }
+#masthead {
+	background-color: #fff;
+}
+.site-content {
+	background-color: #fff;
+}
+/* header #site-header {
+	h1 {
+		font-size: 24px;
+		font-size: 1.714285714rem;
+		line-height: 2;
+	}
+} */
 hr {
 	background-color: #ccc;
 	border: 0;
@@ -654,3 +670,23 @@ object {
 		width: @6cols;
 	}
 }
+
+/* Tablet layout
+ * 600-911 px
+ * Zoomed in above 600 px
+----------------------------------------------- */
+@media screen and (min-width: 37.5em) {
+	#page {
+		width: @8cols;
+	}
+}
+
+/* Widescreen layout
+ * 912-1887 px
+ * Zoomed in above 912 px
+----------------------------------------------- */
+@media screen and (min-width: 57em) {
+	#page {
+		width: @12cols;
+	}
+} 

@@ -113,3 +113,9 @@ add_action( 'wp_enqueue_scripts', 'fishingfleet_scripts' );
  * Implement the Custom Header feature
  */
 //require( get_template_directory() . '/inc/custom-header.php' );
+
+/* Stripping the embedded height & width from Featured Images from http://wordpress.org/support/topic/how-do-you-strip-or-filter-attributes-from-a-posts-tags?replies=1 */
+
+function fishingfleet_clean_wp_width_height($string){
+	return preg_replace('/\<(.*?)(width="(.*?)")(.*?)(height="(.*?)")(.*?)\>/i', '<$1$4$7>',$string);
+}

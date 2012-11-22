@@ -7,6 +7,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<a href="<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 9999,9999 ), false, '' ); echo $src[0]; ?>" rel="lightbox[<?php the_ID(); ?>]">
+			<?php echo fishingfleet_clean_wp_width_height(get_the_post_thumbnail(get_the_ID(),'front-image')); ?>
+		</a>
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'fishingfleet' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
